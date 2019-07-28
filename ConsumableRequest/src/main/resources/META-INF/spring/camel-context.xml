@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Configures the Camel Context-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:cxf="http://camel.apache.org/schema/cxf" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:cxfcore="http://cxf.apache.org/core" xmlns:ctx="http://www.springframework.org/schema/context"
+	xmlns:http-conf="http://cxf.apache.org/transports/http/configuration"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+       http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+       http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+       http://cxf.apache.org/core http://cxf.apache.org/schemas/core.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://cxf.apache.org/transports/http/configuration http://cxf.apache.org/schemas/configuration/http-conf.xsd
+       http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+<bean id="enqwmismessage1" class="com.centrica.fft.processors.EnqWMISMessageProcessor" />
+	<bean id="enqwmismessage2" class="com.centrica.fft.processors.EnqWMISMessageProcessor" />
+	<bean id="enqwmismessage3" class="com.centrica.fft.processors.EnqWMISMessageProcessor" />
+	<bean id="enqwmismessage4" class="com.centrica.fft.processors.EnqWMISMessageProcessor" />
+	<bean id="enqwmismessage5" class="com.centrica.fft.processors.EnqWMISMessageProcessor" />
+	
+
+
+	<bean id="enrichjsonobject" class="com.centrica.fft.util.EnrichConsumableJson" />
+	<bean id="_ExceptionProcessor" class="com.centrica.fft.processors.PartsExpProcessor" />
+	<bean id="formatWDFMessage" class="com.centrica.fft.processors.WDFMessageProcessor" />
+  <!-- here is a sample which processes the input files
+         (leaving them in place - see the 'noop' flag)
+     
+     
+         then performs content based routing on the message using XPath --><camelContext xmlns="http://camel.apache.org/schema/spring">
+  <route>
+    <from uri="file:src/main/resources/testdata?fileName=orderConsumables.json"/>
+     <log message="value is ${body}"/>
+      
+    
+  </route>
+
+  <route id="consumableProcessWIMIS">
+    <from uri="direct:consumableWIMISConversion"/>
+    <log message="ConsumableRequest#log&gt;&gt; ILFGConsumableQueue - Consumable message before Transformation:${body}" loggingLevel="INFO" logName="ConsumableRequest#log"/>
+    <bean ref="formatWDFMessage" method="jsontoWdfConversion" id="formattowdf"/>
+    <log message="ConsumableRequest#log&gt;&gt;  ILWMISTaskUpdateQueue(1-5) - Consumable messages after Transformation:${body}" loggingLevel="INFO" logName="ConsumableRequest#log"/>
+    <to uri="bean:util?method=removeExtraCDATA(*)"/>
+    <log message="ConsumableRequest#log&gt;&gt;  ILWMISTaskUpdateQueue(1-5) - Consumable messages after remove extra CDATA Transformation:${body}" loggingLevel="INFO" logName="ConsumableRequest#log"/>
+    <loadBalance>
+      <roundRobin/>
+      <to uri="direct:ILWMISTaskUpdateQueue1"/>
+      <to uri="direct:ILWMISTaskUpdateQueue2"/>
+      <to uri="direct:ILWMISTaskUpdateQueue3"/>
+      <to uri="direct:ILWMISTaskUpdateQueue4"/>
+      <to uri="direct:ILWMISTaskUpdateQueue5"/>
+    </loadBalance>
+  </route>
+  <route  id="ILWMISTaskUpdateQueue1">
+    <from uri="direct:ILWMISTaskUpdateQueue1"/>
+    <to uri="bean:enqwmismessage1?method=enQueueTaskUpdateMessage1(*)"/>
+  </route>
+  <route  id="ILWMISTaskUpdateQueue2">
+    <from uri="direct:ILWMISTaskUpdateQueue2"/>
+    <to uri="bean:enqwmismessage2?method=enQueueTaskUpdateMessage2(*)"/>
+  </route>
+  <route  id="ILWMISTaskUpdateQueue3">
+    <from uri="direct:ILWMISTaskUpdateQueue3"/>
+    <to uri="bean:enqwmismessage3?method=enQueueTaskUpdateMessage3(*)"/>
+  </route>
+  <route  id="ILWMISTaskUpdateQueue4">
+    <from uri="direct:ILWMISTaskUpdateQueue4"/>
+    <to uri="bean:enqwmismessage4?method=enQueueTaskUpdateMessage4(*)"/>
+  </route>
+  <route  id="ILWMISTaskUpdateQueue5">
+    <from uri="direct:ILWMISTaskUpdateQueue5"/>
+    <to uri="bean:enqwmismessage5?method=enQueueTaskUpdateMessage5(*)"/>
+  </route>
+</camelContext>
+
+</beans>

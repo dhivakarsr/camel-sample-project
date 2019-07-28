@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PART_FITMENT_APPOINTMENTS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="APPLICABILITY">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="TOPIC"/>
+              <xs:element type="xs:int" name="MESSAGE_SEQUENCE_NUMBER"/>
+              <xs:element type="xs:byte" name="AREA"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element type="xs:int" name="FIELD_UNIT_IDENTIFIER"/>
+        <xs:element name="WORK_REQUESTS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="WORK_REQUEST">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="WR_NO"/>
+                    <xs:element name="CUSTOMER">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="TITLE"/>
+                          <xs:element type="xs:string" name="FIRST_NAME"/>
+                          <xs:element type="xs:string" name="SURNAME"/>
+                          <xs:element type="xs:short" name="HOUSE_NUMBER"/>
+                          <xs:element type="xs:string" name="STREET_NAME"/>
+                          <xs:element type="xs:string" name="LOCAL_AREA"/>
+                          <xs:element type="xs:string" name="CITY"/>
+                          <xs:element type="xs:string" name="POST_OUT_CODE"/>
+                          <xs:element type="xs:string" name="POST_IN_CODE"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="EXPECTED_PARTS_LIST">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PART">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="PART_STOCKREF"/>
+                                <xs:element type="xs:string" name="PART_DESCRIPTION"/>
+                                <xs:element type="xs:byte" name="PART_QUANTITY"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
