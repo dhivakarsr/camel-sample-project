@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.fusesource.byexample.hellocamel.CamelContextXmlTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.298 sec - in com.fusesource.byexample.hellocamel.CamelContextXmlTest

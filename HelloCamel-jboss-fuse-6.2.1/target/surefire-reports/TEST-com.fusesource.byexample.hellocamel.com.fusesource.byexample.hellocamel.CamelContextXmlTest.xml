@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.fusesource.byexample.hellocamel.com.fusesource.byexample.hellocamel.CamelContextXmlTest" time="3.137" tests="1" errors="1" skipped="0" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_102\jre\bin"/>
+    <property name="java.vm.version" value="25.102-b14"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\camellproject\HelloCamel-jboss-fuse-6.2.1"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="GB"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\camellproject\HelloCamel-jboss-fuse-6.2.1"/>
+    <property name="java.runtime.version" value="1.8.0_102-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\endorsed"/>
+    <property name="os.arch" value="x86"/>
+    <property name="java.io.tmpdir" value="C:\Users\admin\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:\Users\admin\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6361729685259790873.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_102\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\admin"/>
+    <property name="user.timezone" value="Europe/London"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="admin"/>
+    <property name="java.class.path" value="/C:/Users/admin/devstudio/studio/plugins/org.eclipse.m2e.maven.runtime_1.7.0.20160603-1931/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="32"/>
+    <property name="java.home" value="C:\Program Files (x86)\Java\jdk1.8.0_102\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="1.8.0_102"/>
+    <property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_102\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="D:\camellproject\HelloCamel-jboss-fuse-6.2.1\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+  </properties>
+  <testcase name="testCamelRoute" classname="com.fusesource.byexample.hellocamel.com.fusesource.byexample.hellocamel.CamelContextXmlTest" time="2.972">
+    <error message="org/json/JSONArray" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: org/json/JSONArray
+	at com.fusesource.byexample.hellocamel.com.fusesource.byexample.hellocamel.CamelContextXmlTest.testCamelRoute(CamelContextXmlTest.java:26)
+Caused by: java.lang.ClassNotFoundException: org.json.JSONArray
+	at com.fusesource.byexample.hellocamel.com.fusesource.byexample.hellocamel.CamelContextXmlTest.testCamelRoute(CamelContextXmlTest.java:26)
+</error>
+    <system-out><![CDATA[[                          main] CamelContextXmlTest            INFO  ********************************************************************************
+[                          main] CamelContextXmlTest            INFO  Testing: testCamelRoute(com.fusesource.byexample.hellocamel.com.fusesource.byexample.hellocamel.CamelContextXmlTest)
+[                          main] CamelContextXmlTest            INFO  ********************************************************************************
+[                          main] DefaultTypeConverter           INFO  Loaded 193 type converters
+[                          main] SpringCamelContext             INFO  Apache Camel 2.15.1.redhat-621084 (CamelContext: camel-1) is starting
+[                          main] SpringCamelContext             INFO  Tracing is enabled on CamelContext: camel-1
+[                          main] ManagedManagementStrategy      INFO  JMX is enabled
+[                          main] SpringCamelContext             INFO  AllowUseOriginalMessage is enabled. If access to the original message is not needed, then its recommended to turn this option off as it may improve performance.
+[                          main] SpringCamelContext             INFO  StreamCaching is not in use. If using streams then its recommended to enable stream caching. See more details at http://camel.apache.org/stream-caching.html
+[                          main] JacksonDataFormat              INFO  Registering module: com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule@1c57b40
+[                          main] JaxbDataFormat                 INFO  Creating JAXBContext with contextPath: com.dao and ApplicationContextClassLoader: sun.misc.Launcher$AppClassLoader@1c7c054
+[                          main] JettyHttpComponent             INFO  Using default Jetty continuation timeout for: Endpoint[http://0.0.0.0:8889/hellocamel]
+[                          main] Server                         INFO  jetty-8.1.16.v20140903
+[                          main] AbstractConnector              INFO  Started SelectChannelConnector@0.0.0.0:8889
+[                          main] SpringCamelContext             INFO  Route: HelloWorldRoute started and consuming from: Endpoint[http://0.0.0.0:8889/hellocamel]
+[                          main] SpringCamelContext             INFO  Total 1 routes, of which 1 is started.
+[                          main] SpringCamelContext             INFO  Apache Camel 2.15.1.redhat-621084 (CamelContext: camel-1) started in 0.907 seconds
+[                          main] CamelContextXmlTest            INFO  ********************************************************************************
+[                          main] CamelContextXmlTest            INFO  Testing done: testCamelRoute(com.fusesource.byexample.hellocamel.com.fusesource.byexample.hellocamel.CamelContextXmlTest)
+[                          main] CamelContextXmlTest            INFO  Took: 0.000 seconds (0 millis)
+[                          main] CamelContextXmlTest            INFO  ********************************************************************************
+[                          main] SpringCamelContext             INFO  Apache Camel 2.15.1.redhat-621084 (CamelContext: camel-1) is shutting down
+[                          main] DefaultShutdownStrategy        INFO  Starting to graceful shutdown 1 routes (timeout 10 seconds)
+[el-1) thread #0 - ShutdownTask] ContextHandler                 INFO  stopped o.e.j.s.ServletContextHandler{/,null}
+[el-1) thread #0 - ShutdownTask] DefaultShutdownStrategy        INFO  Route: HelloWorldRoute shutdown complete, was consuming from: Endpoint[http://0.0.0.0:8889/hellocamel]
+[                          main] DefaultShutdownStrategy        INFO  Graceful shutdown of 1 routes completed in 0 seconds
+[                          main] DefaultTypeConverter           INFO  TypeConverterRegistry utilization[noop=0, attempts=0, hits=0, misses=0, failures=0] mappings[total=193, misses=0]
+[                          main] SpringCamelContext             INFO  Apache Camel 2.15.1.redhat-621084 (CamelContext: camel-1) uptime 0.991 seconds
+[                          main] SpringCamelContext             INFO  Apache Camel 2.15.1.redhat-621084 (CamelContext: camel-1) is shutdown in 0.069 seconds
+]]></system-out>
+  </testcase>
+</testsuite>

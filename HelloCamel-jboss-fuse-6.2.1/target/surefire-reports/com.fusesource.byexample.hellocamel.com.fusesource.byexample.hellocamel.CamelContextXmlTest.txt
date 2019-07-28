@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.fusesource.byexample.hellocamel.com.fusesource.byexample.hellocamel.CamelContextXmlTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.137 sec <<< FAILURE! - in com.fusesource.byexample.hellocamel.com.fusesource.byexample.hellocamel.CamelContextXmlTest
+testCamelRoute(com.fusesource.byexample.hellocamel.com.fusesource.byexample.hellocamel.CamelContextXmlTest)  Time elapsed: 2.972 sec  <<< ERROR!
+java.lang.NoClassDefFoundError: org/json/JSONArray
+	at com.fusesource.byexample.hellocamel.com.fusesource.byexample.hellocamel.CamelContextXmlTest.testCamelRoute(CamelContextXmlTest.java:26)
+Caused by: java.lang.ClassNotFoundException: org.json.JSONArray
+	at com.fusesource.byexample.hellocamel.com.fusesource.byexample.hellocamel.CamelContextXmlTest.testCamelRoute(CamelContextXmlTest.java:26)
+
